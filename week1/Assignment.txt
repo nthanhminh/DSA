@@ -1,0 +1,13 @@
+2. Loại bỏ public, static hoặc void sẽ dẫn đến chương trình không thể thực thi được do phương thức main cần phải là public static void main (String[] args) theo yêu cầu của JDK.
+Loại bỏ args sẽ dẫn đến một tham số/mảng không có tên, điều này sẽ gây ra lỗi trong quá trình biên dịch, làm cho chương trình không thể thực thi được.
+3. Tất cả các lỗi này sẽ dẫn đến việc không thể biên dịch hoặc thực thi chương trình một cách thành công.
+4.
+ a) Điều này sẽ dẫn đến một lỗi vì chúng ta không truyền đối số khi gọi hàm, do đó chỉ số 0 sẽ vượt quá giới hạn.
+ b) Unrecognized token in source text.
+ c) Hi, 1234. How are you?
+ d) Error: Could not find or load main class Hi.java
+ e) Error: class found on application class path: HI
+ f) Hi, Alice. How are you?
+7.
+ Chương trình sẽ biên dịch thành công, nhưng khi bạn cố gắng thực thi nó, bạn sẽ gặp lỗi runtime. 
+ Do: Phương thức main trong Java phải có một danh sách đối số (String[] args)

@@ -1,0 +1,20 @@
+1) Cách chọn 3 phần tử trong tập N phần tử là NC3
+NC3=n!/((n-3)!.6)=n(n-1)(n-2)/6 (đpcm)
+5)
+a) N
+b) 1
+c) 1
+d) 2N^3
+e) 1
+f) 2
+g) 0
+
+6)
+a) nlogn
+b) n^2
+c) nlogn
+
+7)
+
+8)
+ 

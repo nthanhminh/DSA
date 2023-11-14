@@ -1,4 +1,3 @@
-public class buildAVL{
     class Node {
         int data;
         int height;
@@ -16,6 +15,10 @@ public class buildAVL{
     public class SelfBalancingTree {
         public Node root;
     
+        public Node getRoot(){
+            return root;
+        }
+
         int getHeight(Node node) {
             if (node == null) {
                 return 0;
@@ -92,6 +95,33 @@ public class buildAVL{
     
             return root;
         }
+
+       public void inorder(Node root) {
+        if (root == null) return;
+        inorder(root.left);
+        System.out.print(root.val + "(BF=" + getBalanceFactor(root) + ") ");
+        inorder(root.right);
     }
-    
+   
+    public void preorder(Node root) {
+        if (root == null) return;
+        System.out.print(root.val + "(BF=" + getBalanceFactor(root) + ") ");
+        preorder(root.left);
+        preorder(root.right);
+    }
+    }
+
+
+public class Solution{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        SelfBalancingTree build = new buildAVL();
+        for (int i = 0; i < n; i++) {
+            build.insert(new Node(scanner.nextInt()));
+        }
+        build.preorder(build.root);
+        System.out.println();
+        build.inorder(build.root);
+    }
 }
